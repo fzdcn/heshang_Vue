@@ -1,0 +1,321 @@
+@import "variable.styl"
+
+body
+  font-family -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif
+  background-color $white
+  line-height 1.4
+  font-size $fontSizeMedium
+
+a
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+
+// 禁用高亮块
+
+textarea
+  overflow auto
+  word-break break-all
+  margin 0
+  padding 3px
+  box-sizing border-box
+
+.green
+  color $green
+
+.bg-green
+  background-color $green
+  color $white
+
+.blue
+  color $blue
+
+.bg-blue
+  background-color $blue
+  color $white
+
+.yellow
+  color $yellow
+
+.bg-yellow
+  background-color $yellow
+  color $white
+
+.red
+  color $red
+
+.bg-red
+  background-color $red
+  color $white
+
+.grey
+  color $darkGrey
+
+.bg-grey
+  background-color $grey
+
+.white
+  color $white
+
+.bg-white
+  background-color $white
+
+.btn
+  padding px2rem(11px) px2rem(32px)
+  text-align center
+  color $white
+  display inline-block
+  &:link
+    color $white
+  &:visited
+    color $white
+  &:hover
+    color $white
+  &:active
+    color $white
+  &.btn-sm
+    font-size $fontSizeSmall
+  &.btn-lg
+    padding px2rem(20px) px2rem(80px)
+  &.btn-block
+    display block
+    width: 100%
+  &.btn-red
+    background-color $red
+  &.btn-green
+    background-color $green
+  &.btn-blue
+    background-color $blue
+  &.btn-grey
+    background-color $white
+    border 1px solid $darkGrey
+    color $darkGrey
+    &:link
+      color $darkGrey
+    &:visited
+      color $darkGrey
+    &:hover
+      color $darkGrey
+    &:active
+      color $darkGrey
+
+.text-center
+  text-align center
+
+.text-left
+  text-align left
+
+.text-right
+  text-align right
+
+.text-bold
+  font-weight bold
+
+.center-img
+  display flex
+  justify-content center
+  align-items center
+  overflow hidden
+  img
+    min-width 100%
+    min-height 100%
+
+.image-max-width-100
+  img
+    max-width 100%
+    height: auto !important;
+  canvas
+    max-width 100%
+
+.dis-flex
+  display flex
+  align-items center
+
+.link-list
+  .detail-item
+    height px2rem(80px)
+    line-height px2rem(80px)
+    display flex
+    justify-content space-between
+    align-items center
+    padding-right px2rem(28px)
+
+    & + .detail-item
+      border-top 1px solid #EBEBEB
+
+// 分享推荐里面的 二维码 大小
+#qr-box
+  img
+    width 100%
+    height 100%
+
+// 分页
+nav ul.pagination
+  display inline-block
+  padding px2rem(20px) 0
+  &:after
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  li
+    list-style none
+    float left
+    padding 0 px2rem(10px)
+    min-width px2rem(60px)
+    height px2rem(60px)
+    line-height px2rem(60px)
+    margin px2rem(2px)
+    border 1px solid $grey
+    text-align center
+    &.active
+      background-color $blue
+      border 1px solid $blue
+      & a
+        color $white
+
+// form 表单
+.form
+  padding px2rem(30px) px2rem(24px)
+  .form-group
+    margin-bottom px2rem(20px)
+    .control-label
+      display flex
+      height px2rem(66px)
+      font-size $fontSizeMedium
+      .label
+        flex-basis px2rem(180px)
+        width px2rem(160px)
+        line-height px2rem(66px)
+    .form-bottom
+      margin-bottom px2rem(-20px)
+      margin-left px2rem(140px)
+    .input-control
+      display block
+      width 100%
+      padding px2rem(6px) px2rem(12px)
+      border-radius 4px
+      border 1px solid $darkGrey
+      &[readonly]
+        background-color $grey
+      &.half
+        width 50%
+
+    .input-radio
+      height px2rem(66px)
+      line-height px2rem(66px)
+  .form-button-group
+    height px2rem(66px)
+    line-height px2rem(66px)
+    .btn
+      padding px2rem(10px) px2rem(20px)
+      margin-left px2rem(10px)
+
+  .submit
+    padding px2rem(16px)
+
+// 遮罩层
+.overlayer
+  position fixed
+  left 0
+  top 0
+  background-color rgba(0, 0, 0, .5)
+  width 100%
+  height 100%
+  z-index $overlayerZindex
+  &.light
+    background-color rgba(255, 255, 255, .7)
+
+// toast
+#toasted-container.top-center
+  .toast
+    min-height $headerHeight
+    color $white
+    font-size $fontSizeMedium
+    &.success
+      background-color $green
+    &.error
+      background-color $red
+    &.info
+      background-color $blue
+
+.data-loading
+  height px2rem(80px)
+  line-height px2rem(80px)
+  font-size $fontSizeSmall
+  text-align center
+  img
+    margin-left 5px
+    width px2rem(25px)
+
+// swiper
+.swiper-slide img
+  width 100%
+
+.swiper-pagination-bullet-active
+  background rgba(255, 255, 255, .9)
+
+// a 标签 link 标志
+.a-link a
+  color $blue
+  text-decoration underline
+
+.iconfont
+  font-size $fontSizeMedium
+
+// 用户头像
+.user-head
+  width 100%
+  height 100%
+  border-radius 50%
+
+// 右上角图标
+.top-right-icon
+  display block
+  position absolute
+  top -5px
+  right -5px
+  font-size 12px
+
+// 个人中心头像处的上传组件宽度控制
+.user-avatar
+  .g-core-image-upload-form
+    width 61px !important
+
+// 分割线
+.split
+  display block
+  width 100%
+  border-bottom 1px solid #e6e6e6
+  margin px2rem(10px) 0
+
+// wangeditor 样式
+.w-e-text-container
+  z-index: $wangeditorZindex !important
+
+.w-e-toolbar .w-e-menu
+  z-index: $wangeditorZindex+ 1 !important
+
+// header 的图标大小
+.header .iconfont
+  font-size $fontSizeExtraLarge
+
+// 带背景的按钮
+.bg-menu-1
+  background-image url("/static/images/app-menu-bg-1.jpg")
+  background-size cover
+
+.bg-menu-2
+  background-image url("/static/images/app-menu-bg-2.jpg")
+  background-size cover
+
+.bg-header
+  background-image url("/static/images/header-bg.jpg")
+  background-size cover
+
+.bg-box-title
+  background-image url("/static/images/box-title-bg.jpg")
+  background-size cover
+
+.bg-logout
+  background-image url("/static/images/logout-bg.jpg")
+  background-size cover
