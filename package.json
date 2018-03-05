@@ -2,7 +2,7 @@
   "name": "heshang-mobile",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "kriss <462679766@qq.com>",
+  "author": "tome",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
